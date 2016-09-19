@@ -1,0 +1,13 @@
+.chart{
+	background-color: #000;
+	max-height: 350px;
+}
+
+body {
+	padding-top: 15%; 
+}
+
+.principal{
+	padding: 48px 15px;
+	text-align: center;
+}
