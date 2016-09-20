@@ -15,15 +15,15 @@
 			
 			<div class="col-md-12">
 				<div class="row">
-					<div class="col-md-4">
-					
+					<div class="col-md-6">
+						<canvas id="idSemDados" class="chart"></canvas>
 					</div>
 					
-					<div class="col-md-4">
-						<canvas id="horarios" class="chart"></canvas>
+					<div class="col-md-6">
+						<canvas id="idHorarios" class="chart"></canvas>
 					</div>
 					
-					<div class="col-md-4">
+					<div class="col-md-6">
 					
 					</div>
 					

@@ -1,5 +1,5 @@
 <?php 
-include_once 'classe/Trafico.php';
+include_once 'classes/Trafico.php';
 new Trafico();
 ?>
 
@@ -17,11 +17,9 @@ new Trafico();
 		<div class="container-fluid">
 			<?php include 'includes/header.php'; ?>
 			<div class="row">
-				<div class="col-md-4"></div>
-				<div class="col-md-4 top text-center">
+				<div class="col-md-6 top text-center">
 					<h1>Página Inicial</h1>
 				</div>
-				<div class="col-md-4"></div>
 			</div>
 		</div>
 		

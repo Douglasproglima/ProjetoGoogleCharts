@@ -1,5 +1,5 @@
 <?php 
-include 'classe/Trafico.php';
+include 'classes/Trafico.php';
 new Trafico();
 ?>
 
