@@ -9,7 +9,6 @@ class Trafico {
 	
 	public function __construct(){
 		$this->db = new PDO("mysql:host=localhost; dbname=googlecharts", "root","root");
-	
 		$this->uri = filter_input(INPUT_SERVER, 'REQUEST_URI', FILTER_DEFAULT);
 		//$this->ip = filter_input(INPUT_SERVER, 'REMOTE_ADDR', FILTER_VALIDATE_IP);
 		$this->ip = '189.110.56.197';
@@ -84,7 +83,7 @@ class Trafico {
 	}
 	
 	private function _salvar_dados(){
-		$sqlInsert = "INSERT INTO trafego ( data,  pagina,  ip,  cidade,  regiao,  pais,  navegador,  referencia,  plataforma) "
+		$sqlInsert = " INSERT INTO trafego ( data,  pagina,  ip,  cidade,  regiao,  pais,  navegador,  referencia,  plataforma) "
 				   . "				VALUES(:data, :pagina, :ip, :cidade, :regiao, :pais, :navegador, :referencia, :plataforma) ";
 		$query = $this->db->prepare($sqlInsert);
 		$query->execute($this->data);
