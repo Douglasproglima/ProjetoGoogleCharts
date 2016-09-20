@@ -1,9 +1,8 @@
-	
 	RewriteEngine On
 	
-	RewriteRule ^admin$ admin.pgp [NC,L]
+	RewriteRule ^admin$ admin.php [NC,L]
 	RewriteRule ^home$ index.php [NC,L]
 	RewriteRule ^sobre$ sobre.php [NC,L]
 	RewriteRule ^servicos$ servicos.php [NC,L]
 	RewriteRule ^contato$ contato.php [NC,L]
-	RewriteRule ^funcionts(.*)$ functions.php [NC,L]
+	RewriteRule ^relatorios(.*)$ classes/Relatorios.php [NC,L]
