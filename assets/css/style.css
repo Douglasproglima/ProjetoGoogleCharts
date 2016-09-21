@@ -1,10 +1,11 @@
 .chart{
 	background-color: #000;
-	max-height: 350px;
+	max-height: 550px;
+	margin-bottom: 20px;
 }
 
 body {
-	padding-top: 15%; 
+	padding-top: 3%; 
 }
 
 .principal{
