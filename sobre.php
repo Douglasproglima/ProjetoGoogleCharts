@@ -1,6 +1,6 @@
 <?php 
-include 'classes/Trafico.php';
-new Trafico();
+include 'classes/Trafeco.php';
+new Trafeco();
 ?>
 
 <!DOCTYPE >

@@ -9,11 +9,11 @@ function retornoVal(param){
 
 /*********************************** GRÁFICO DE LINHAS - SEM DADOS ***********************************/
 
-/*$(function () {
+$(function () {
     var ctx, data, myLineChart, options;
     Chart.defaults.global.responsive = true;
     ctx = $('#idSemDados').get(0).getContext('2d');
-    ctx.canvas.height = 80;
+    ctx.canvas.height = 45;
     options = {
         showScale: true,
         scaleShowGridLines: false,
@@ -49,7 +49,7 @@ function retornoVal(param){
         ]
     };
     myLineChart = new Chart(ctx).Line(data, options);
-});*/
+});
 
 /*********************************** GRÁFICO DE LINHAS - POR HORA***********************************/
 
