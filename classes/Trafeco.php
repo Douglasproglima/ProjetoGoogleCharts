@@ -1,6 +1,6 @@
 <?php
 
-class Trafico {
+class Trafeco {
 	private $db;
 	private $ip;
 	private $data;
@@ -23,7 +23,7 @@ class Trafico {
 	}
 	
 	private function _set_cookie(){
-		setcookie(md5($this->uri), true, time() + strtotime(date('Y-m-d 23:59:59')) - time());
+		setcookie(md5($this->uri), true, time() + strtotime(date('Y-m-d 23:59:59')));
 	}
 	
 	private function _set_data(){
