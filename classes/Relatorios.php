@@ -5,7 +5,8 @@
 	class Relatorios{
 		private $db;
 		private $dataAtual;
-		
+
+###################################Construtor __construct()###################################		
 		public function __construct(){
 			
 	 		$opcao = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET LC_TIME_NAMES = 'pt_BR'");
@@ -23,7 +24,8 @@
 				return FALSE;
 			}
 		}
-		
+
+###################################function trafegoPorHora###################################
 	 	public function trafegoPorHora($parametro = NULL){
 	 		
 	 		//$periodo = date('Y-m-d H:i:s', strtotime('-2 days', strtotime($this->dataAtual)));
@@ -52,7 +54,8 @@
 			//O tipo de dados utilizado para comunicar o PHP com o Javascript é o json;
 			echo json_encode($final);
 	 	}
-	 	
+
+###################################function trafegoSemanal###################################	 	
 	 	public function trafegoSemanal(){
 	 		
 	 		$periodo = date('Y-m-d H:i:s', strtotime($param));
@@ -72,6 +75,7 @@
 			echo json_encode($dados);
 	 	}
 	 	
+###################################function trafegoMensal###################################	 	
 	 	public function trafegoMensal(){
 	 		
 	 		$mesAtual = date('m');
@@ -97,7 +101,8 @@
 			
 			echo json_encode($final);
 	 	}
-	
+
+###################################function trafegoNavegador###################################
 	 	public function trafegoNavegador($param = NULL){
 	 			
 	 		$periodo = date('Y-m-d H:i:s', strtotime($param));
@@ -126,7 +131,8 @@
 		 	
 		 	echo json_encode($dados);
 	 	}	
-	 	
+
+###################################function trafegoPlataforma###################################
 	 	public function trafegoPlataforma($param = NULL){
 	 		
 	 		$periodo = date('Y-m-d H:i:s', strtotime($param));
@@ -155,7 +161,27 @@
 			
 			echo json_encode($dados);
 	 	}
+
+	 	###################################Método trafecoPagina###################################
+	 	public function trafegoPagina($param){
+	 		$periodo = date('Y-m-d H:i:s', strtotime($param));
 	 	
+	 		$sql = "SELECT pagina, COUNT(id) as visitas "
+	 				."FROM  trafego "
+	 				."WHERE data >= '{$periodo}' "
+	 				."GROUP BY pagina "
+	 				."ORDER BY visitas DESC";
+	 		$query = $this->db->query($sql);
+	 		$resultado = $query->fetchAll(PDO::FETCH_OBJ);
+
+	 		foreach ($resultado as $resultados){
+	 			$dados[$resultados->pagina] = $resultados->visitas;
+	 		}
+	 		
+	 		echo json_encode($dados);
+	 	}	 	
+	 	
+###################################function _dia_do_mes###################################	 	
 	 	private function _dia_do_mes(){
 	 		
 	 		$diaAtual = date('d');
